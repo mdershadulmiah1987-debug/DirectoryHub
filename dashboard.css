@@ -1,0 +1,150 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #f4f7fc, #e8eefc);
+    min-height:100vh;
+    color:#333;
+}
+
+/* Header */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:#fff;
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#2563eb;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#2563eb;
+}
+
+#darkModeBtn{
+    border:none;
+    background:#2563eb;
+    color:#fff;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s;
+}
+
+#darkModeBtn:hover{
+    transform:rotate(20deg);
+}
+
+/* Dashboard Section */
+
+.dashboard{
+    width:90%;
+    max-width:1200px;
+    margin:50px auto;
+}
+
+.dashboard h1{
+    font-size:36px;
+    margin-bottom:30px;
+    color:#1e293b;
+}
+
+/* Cards */
+
+.dashboard-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.4);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(37,99,235,0.2);
+}
+
+.card h2{
+    font-size:42px;
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:16px;
+    color:#64748b;
+    font-weight:500;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        justify-content:center;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .dashboard h1{
+        font-size:28px;
+        text-align:center;
+    }
+
+    .card{
+        padding:25px;
+    }
+
+    .card h2{
+        font-size:34px;
+    }
+
+}
